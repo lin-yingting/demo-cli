@@ -12,6 +12,7 @@ app.all('*', function (req, res, next) {
   //让options尝试请求快速结束
   else next()
 })
+app.use(exppress.static('public'))
 
 app.get('/', (req, res) => {
   res.json({
